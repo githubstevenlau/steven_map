@@ -13,8 +13,7 @@ async function initMap() {
 
     const homeContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Home</h1>';
 
     const homeInfoWindow = new google.maps.InfoWindow({
@@ -40,13 +39,10 @@ async function initMap() {
 
     const argelesSurMerContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Argeles-sur-Mer</h1>' +
-        '<div id="bodyContent">' +
-        "Holiday with Leanna" +
-        "</div>" +
-        "</div>";
+        '<div id="bodyContent">Holiday with Leanna</div>' +
+        '</div>';
 
     const argelesSurMerInfoWindow = new google.maps.InfoWindow({
         content: argelesSurMerContentString,
@@ -71,13 +67,10 @@ async function initMap() {
 
     const lloretDeMarContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Lloret de Mar</h1>' +
-        '<div id="bodyContent">' +
-        "Holiday with Leanna" +
-        "</div>" +
-        "</div>";
+        '<div id="bodyContent">Holiday with Leanna</div>' +
+        '</div>';
 
     const lloretDeMarInfoWindow = new google.maps.InfoWindow({
         content: lloretDeMarContentString,
@@ -98,19 +91,14 @@ async function initMap() {
     });
 
     // Malta
-
-    const malta = {lat: 35.853287478920194, lng: 14.443137642328935 };
-
+    const malta = { lat: 35.853287478920194, lng: 14.443137642328935 };
 
     const maltaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Malta</h1>' +
-        '<div id="bodyContent">' +
-        "Holiday with Leanna" +
-        "</div>" +
-        "</div>";
+        '<div id="bodyContent">Holiday with Leanna</div>' +
+        '</div>';
 
     const maltaInfoWindow = new google.maps.InfoWindow({
         content: maltaContentString,
@@ -126,6 +114,34 @@ async function initMap() {
     maltaMarker.addListener("click", () => {
         maltaInfoWindow.open({
             anchor: maltaMarker,
+            map,
+        });
+    });
+
+    // Cesme, Turkey
+    const cesme = { lat: 40.124901570129126, lng: 25.908576653957212 };
+
+    const cesmeContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Cesme</h1>' +
+        '<div id="bodyContent">Holiday with Leanna</div>' +
+        '</div>';
+
+    const cesmeInfoWindow = new google.maps.InfoWindow({
+        content: cesmeContentString,
+        ariaLabel: "Cesme",
+    });
+
+    const cesmeMarker = new AdvancedMarkerElement({
+        map,
+        position: cesme,
+        title: "Cesme",
+    });
+
+    cesmeMarker.addListener("click", () => {
+        cesmeInfoWindow.open({
+            anchor: cesmeMarker,
             map,
         });
     });
