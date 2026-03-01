@@ -35,6 +35,37 @@ async function initMap() {
         });
     });
 
+    // Argeles sur Mer
+    const argelesSurMer = { lat: 42.54869785600672, lng: 3.0185031432250735 };
+
+    const argelesSurMerContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Argeles-sur-Mer</h1>' +
+        '<div id="bodyContent">' +
+        "Holiday with Leanna" +
+        "</div>" +
+        "</div>";
+
+    const argelesSurMerInfoWindow = new google.maps.InfoWindow({
+        content: argelesSurMerContentString,
+        ariaLabel: "Argeles-sur-Mer",
+    });
+
+    const argelesSurMerMarker = new AdvancedMarkerElement({
+        map,
+        position: argelesSurMer,
+        title: "Argeles Sur Mer",
+    });
+
+    argelesSurMerMarker.addListener("click", () => {
+        argelesSurMerInfoWindow.open({
+            anchor: argelesSurMerMarker,
+            map,
+        });
+    });
+
     // Amsterdam April 2023
     const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
 
@@ -53,9 +84,9 @@ async function initMap() {
         ariaLabel: "Hotel Jakarta",
     });
 
-    const hotelJakartaMarker = new google.maps.Marker({
-        position: hotelJakarta,
+    const hotelJakartaMarker = new AdvancedMarkerElement({
         map,
+        position: hotelJakarta,
         title: "Hotel Jakarta",
     });
 
@@ -100,6 +131,9 @@ async function initMap() {
             map,
         });
     });
+
+    // Barcelona April 2024
+    //const sallesPere:
 
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
