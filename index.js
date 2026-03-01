@@ -66,6 +66,70 @@ async function initMap() {
         });
     });
 
+    // Lloret de Mar
+    const lloretDeMar = { lat: 42.054430227481966, lng: 2.839329305587317 };
+
+    const lloretDeMarContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Lloret de Mar</h1>' +
+        '<div id="bodyContent">' +
+        "Holiday with Leanna" +
+        "</div>" +
+        "</div>";
+
+    const lloretDeMarInfoWindow = new google.maps.InfoWindow({
+        content: lloretDeMarContentString,
+        ariaLabel: "Lloret de Mar",
+    });
+
+    const lloretDeMarMarker = new AdvancedMarkerElement({
+        map,
+        position: lloretDeMar,
+        title: "Lloret de Mar",
+    });
+
+    lloretDeMarMarker.addListener("click", () => {
+        lloretDeMarInfoWindow.open({
+            anchor: lloretDeMarMarker,
+            map,
+        });
+    });
+
+    // Malta
+
+    const malta = {lat: 35.853287478920194, lng: 14.443137642328935 };
+
+
+    const maltaContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Malta</h1>' +
+        '<div id="bodyContent">' +
+        "Holiday with Leanna" +
+        "</div>" +
+        "</div>";
+
+    const maltaInfoWindow = new google.maps.InfoWindow({
+        content: maltaContentString,
+        ariaLabel: "Malta",
+    });
+
+    const maltaMarker = new AdvancedMarkerElement({
+        map,
+        position: malta,
+        title: "Malta",
+    });
+
+    maltaMarker.addListener("click", () => {
+        maltaInfoWindow.open({
+            anchor: maltaMarker,
+            map,
+        });
+    });
+
     // Amsterdam April 2023
     const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
 
