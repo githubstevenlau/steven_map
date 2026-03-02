@@ -146,18 +146,43 @@ async function initMap() {
         });
     });
 
+    // Rome 1 - 4 Jul 2018
+    const rome = { lat: 41.8967, lng: 12.4822 };
+
+    const romeContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
+        '<div id="bodyContent">1-4 Jul 2018</div>' +
+        '</div>';
+
+    const romeInfoWindow = new google.maps.InfoWindow({
+        content: romeContentString,
+        ariaLabel: "Rome",
+    });
+
+    const romeMarker = new AdvancedMarkerElement({
+        map,
+        position: rome,
+        title: "Rome",
+    });
+
+   romeMarker.addListener("click", () => {
+        romeInfoWindow.open({
+            anchor: romeMarker,
+            map,
+        });
+    });
+
     // Amsterdam April 2023
     const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
 
     const hotelJakartaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Hotel Jakarta</h1>' +
-        '<div id="bodyContent">' +
-        "Trip with Kathryn 25-26 April 2023. Our first holiday together." +
-        "</div>" +
-        "</div>";
+        '<div id="bodyContent">Trip with Kathryn 25-26 April 2023. Our first holiday together.</div>' +
+        '</div>';
 
     const hotelJakartaInfoWindow = new google.maps.InfoWindow({
         content: hotelJakartaContentString,
@@ -187,17 +212,16 @@ async function initMap() {
 
     const keukenhofContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
         '<li>26 April 2023 - Kathryn</li>' +
         '<li>28 March 2019 - Mum</li>' +
         '<li>15 May 2016 - Neil Gordon</li>' +
-        '</ul>'
-        "</div>" +
-        "</div>";
+        '</ul>' +
+        '</div>' +
+        '</div>';
 
     const keukenhofInfoWindow = new google.maps.InfoWindow({
         content: keukenhofContentString,
@@ -220,16 +244,15 @@ async function initMap() {
 
     const villaFavoritaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Hotel Villa Favorita</h1>' +
         '<div id="bodyContent">' +
         "The gorgeous hotel where we stayed 19-20 October 2025" +
         " that Kathryn organised for Steven's 50th birthday. The view of" +
         " the beach and sea from the window was stunning. Breakfast and drinks" +
         " in the beautiful bar."
-        "</div>" +
-        "</div>";
+        '</div>' +
+        '</div>';
 
     const villaFavoritaInfoWindow = new google.maps.InfoWindow({
         content: villaFavoritaContentString,
@@ -253,15 +276,14 @@ async function initMap() {
 
     const arimaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">ARIMA Hotel & Spa</h1>' +
         '<div id="bodyContent">' +
         "The beautiful hotel where we stayed 21-22 October 2025" +
         " that Kathryn organised for Steven's 50th birthday. We had a lovely balcony and a great" +
         " view of the grounds and forest. We used the luxury spa and had a relaxing massage." +
-        "</div>" +
-        "</div>";
+        '</div>' +
+        '</div>';
 
     const arimaInfoWindow = new google.maps.InfoWindow({
         content: arimaContentString,
@@ -284,15 +306,14 @@ async function initMap() {
     const martinb = { lat: 43.26694601928382, lng: -2.0156468200988975 };
     const martinbContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Restaurante Martin Berasategui</h1>' +
         '<div id="bodyContent">' +
         "Also referred to as Martin B, Three Star Michelin restaurant in " +
         "San Sebastián visited on 22 October 2025 for lunch to celebrate " +
         "Steven's 50th birthday organised by Kathryn. We had the amazing tasting menu." +
-        "</div>" +
-        "</div>";
+        '</div>' +
+        '</div>';
 
     const martinbInfoWindow = new google.maps.InfoWindow({
         content: martinbContentString,
