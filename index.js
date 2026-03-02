@@ -97,7 +97,7 @@ async function initMap() {
         '<div id="content">' +
         '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Malta</h1>' +
-        '<div id="bodyContent">Holiday with Leanna</div>' +
+        '<div id="bodyContent">Holiday with Leanna 26-28 Sep 2005</div>' +
         '</div>';
 
     const maltaInfoWindow = new google.maps.InfoWindow({
@@ -124,7 +124,7 @@ async function initMap() {
     const cesmeContentString =
         '<div id="content">' +
         '<div id="siteNotice"></div>' +
-        '<h1 id="firstHeading" class="firstHeading">Cesme</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Cesme, Turkey</h1>' +
         '<div id="bodyContent">Holiday with Leanna</div>' +
         '</div>';
 
