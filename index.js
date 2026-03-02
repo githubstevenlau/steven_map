@@ -63,7 +63,7 @@ async function initMap() {
     });
 
     // Lloret de Mar
-    const lloretDeMar = { lat: 42.054430227481966, lng: 2.839329305587317 };
+    const lloretDeMar = { lat: 41.699790714929954, lng: 2.8383850372074138 };
 
     const lloretDeMarContentString =
         '<div id="content">' +
