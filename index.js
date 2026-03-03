@@ -155,7 +155,7 @@ async function initMap() {
         '<h1 id="firstHeading" class="firstHeading">Paris</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
-        '<li>14-16 Jun - Mum</li>' +
+        '<li>14-16 Jan 2020 - Mum</li>' +
         '<li>20-23 Mar 2018 - Pamela</li>' +
         '<li>24-26 Oct 2017 - Harrison, Georgia and Lydia</li>' +
         '<li>18 Aug 2001 - Mum and Leanna</li>' +
