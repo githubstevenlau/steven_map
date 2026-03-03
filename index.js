@@ -34,6 +34,34 @@ async function initMap() {
         });
     });
 
+    // Atlanta, GA, USA
+    const atlanta = { lat: 33.7501, lng: -84.3885 };
+
+    const atlantaContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Atlanta, Georgia, USA</h1>' +
+        '<div id="bodyContent">Trip with Pamela and Leanna</div>' +
+        '</div>';
+
+    const atlantaInfoWindow = new google.maps.InfoWindow({
+        content: atlantaContentString,
+        ariaLabel: "Atlanta, Georgia, USA",
+    });
+
+    const atlantaMarker = new AdvancedMarkerElement({
+        map,
+        position: atlanta,
+        title: "Atlanta, Georgia, USA",
+    });
+
+    atlantaMarker.addListener("click", () => {
+        atlantaInfoWindow.open({
+            anchor: atlantaMarker,
+            map,
+        });
+    });
+
     // Argeles sur Mer
     const argelesSurMer = { lat: 42.54869785600672, lng: 3.0185031432250735 };
 
