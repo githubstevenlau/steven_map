@@ -146,6 +146,41 @@ async function initMap() {
         });
     });
 
+    // Paris 24-26 Oct 2017
+    const paris = { lat: 48.8566, lng: 2.3522 };
+
+    const parisContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Paris</h1>' +
+        '<div id="bodyContent">' +
+        '<ul>' +
+        '<li>14-16 Jun - Mum</li>' +
+        '<li>20-23 Mar 2018 - Pamela</li>' +
+        '<li>24-26 Oct 2017 - Harrison, Georgia and Lydia</li>' +
+        '<li>18 Aug 2001 - Mum and Leanna</li>' +
+        '</ul>' +
+        '</div>' +
+        '</div>';
+
+    const parisInfoWindow = new google.maps.InfoWindow({
+        content: parisContentString,
+        ariaLabel: "Paris",
+    });
+
+    const parisMarker = new AdvancedMarkerElement({
+        map,
+        position: paris,
+        title: "Paris",
+    });
+
+    parisMarker.addListener("click", () => {
+        parisInfoWindow.open({
+            anchor: parisMarker,
+            map,
+        });
+    });
+
     // Rome 1 - 4 Jul 2018
     const rome = { lat: 41.8967, lng: 12.4822 };
 
