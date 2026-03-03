@@ -146,6 +146,61 @@ async function initMap() {
         });
     });
 
+    // Japan 22 Sep - 3 Oct 2016
+    const tokyo = { lat: 35.6764, lng: 139.65 };
+
+    const tokyoContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Tokyo</h1>' +
+        '<div id="bodyContent">40th birthday trip with Kash and Thuc 22 Sep - 3 Oct 2016</div>' +
+        '</div>';
+
+    const tokyoInfoWindow = new google.maps.InfoWindow({
+        content: tokyoContentString,
+        ariaLabel: "Tokyo",
+    });
+
+    const tokyoMarker = new AdvancedMarkerElement({
+        map,
+        position: tokyo,
+        title: "Tokyo",
+    });
+
+    tokyoMarker.addListener("click", () => {
+        tokyoInfoWindow.open({
+            anchor: tokyoMarker,
+            map,
+        });
+    });
+
+    const kyoto = { lat: 35.0116, lng: 135.7681 };
+
+    const kyotoContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Kyoto</h1>' +
+        '<div id="bodyContent">30 Sep 2016 with Kash and Thuc</div>' +
+        '</div>';
+
+    const kyotoInfoWindow = new google.maps.InfoWindow({
+        content: kyotoContentString,
+        ariaLabel: "Kyoto",
+    });
+
+    const kyotoMarker = new AdvancedMarkerElement({
+        map,
+        position: kyoto,
+        title: "Kyoto, Japan",
+    });
+
+    kyotoMarker.addListener("click", () => {
+        kyotoInfoWindow.open({
+            anchor: kyotoMarker,
+            map,
+        });
+    });
+
     // Paris 24-26 Oct 2017
     const paris = { lat: 48.8566, lng: 2.3522 };
 
