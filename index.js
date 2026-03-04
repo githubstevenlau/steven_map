@@ -202,6 +202,39 @@ async function initMap() {
         });
     });
 
+    // Copenhagen 17-18 Jun 2016
+    const copenhagen = { lat: 55.6771, lng: 12.5683 };
+
+    const copenhagenContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Copenhagen</h1>' +
+        '<div id="bodyContent">' +
+        '<ul>' +
+        '<li>1-3 Feb 2025 Roxette the Musical</li>' +
+        '<li>17-18 Jun 2016 Jonathan Yeo Portraits</li>' +
+        '</ul>' +
+        '</div>' +
+        '</div>';
+
+    const copenhagenInfoWindow = new google.maps.InfoWindow({
+        content: copenhagenContentString,
+        ariaLabel: "Copenhagen",
+    });
+
+    const copenhagenMarker = new AdvancedMarkerElement({
+        map,
+        position: copenhagen,
+        title: "Copenhagen",
+    });
+
+    copenhagenMarker.addListener("click", () => {
+        copenhagenInfoWindow.open({
+            anchor: copenhagenMarker,
+            map,
+        });
+    });
+
     // Japan 22 Sep - 3 Oct 2016
     const tokyo = { lat: 35.6764, lng: 139.65 };
 
