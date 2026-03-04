@@ -320,6 +320,40 @@ async function initMap() {
         });
     });
 
+   // Fontainebleau 19-21 Jul 2019
+   // Fontainebleau 6-8 Oct 2023
+    const fontainebleau = { lat: 48.4047, lng: 2.7016 };
+
+    const fontainebleauContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Fontainebleau</h1>' +
+        '<div id="bodyContent">' +
+        '<ul>' +
+        '<li>6-8 Oct 2023 - Boulder Bus with Georgia and Lydia</li>' +
+        '<li>19-21 Jul 2019 - Boulder Bus</li>' +
+        '</ul>' +
+        '</div>' +
+        '</div>';
+
+    const fontainebleauInfoWindow = new google.maps.InfoWindow({
+        content: fontainebleauContentString,
+        ariaLabel: "Fontainebleau",
+    });
+
+    const fontainebleauMarker = new AdvancedMarkerElement({
+        map,
+        position: fontainebleau,
+        title: "Fontainebleau",
+    });
+
+    fontainebleauMarker.addListener("click", () => {
+        fontainebleauInfoWindow.open({
+            anchor: fontainebleauMarker,
+            map,
+        });
+    });
+
     // Amsterdam April 2023
     const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
 
