@@ -174,6 +174,34 @@ async function initMap() {
         });
     });
 
+    // Bali, Indonesia
+    const bali = { lat: 8.4095, lng: 115.1889 };
+
+    const baliContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Bali</h1>' +
+        '<div id="bodyContent">Holiday with Mum, Pamela and Leanna</div>' +
+        '</div>';
+
+    const baliInfoWindow = new google.maps.InfoWindow({
+        content: baliContentString,
+        ariaLabel: "Bali",
+    });
+
+    const baliMarker = new AdvancedMarkerElement({
+        map,
+        position: bali,
+        title: "Bali",
+    });
+
+    baliMarker.addListener("click", () => {
+        baliInfoWindow.open({
+            anchor: baliMarker,
+            map,
+        });
+    });
+
     // Japan 22 Sep - 3 Oct 2016
     const tokyo = { lat: 35.6764, lng: 139.65 };
 
