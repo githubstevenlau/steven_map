@@ -13,7 +13,6 @@ async function initMap() {
 
     const homeContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Home</h1>';
 
     const homeInfoWindow = new google.maps.InfoWindow({
@@ -235,6 +234,40 @@ async function initMap() {
         });
     });
 
+    // Barcelona 12-18 Jul 2016
+    // Barcelona 7-11 Apr 2024
+    const barcelona = { lat: 41.3874, lng: 2.1686 };
+
+    const barcelonaContentString =
+        '<div id="content">' +
+        '<div id="siteNotice"></div>' +
+        '<h1 id="firstHeading" class="firstHeading">Paris</h1>' +
+        '<div id="bodyContent">' +
+        '<ul>' +
+        '<li>7-11 Apr 2024 - Kathryn, Ellis and Heath</li>' +
+        '<li>12-18 Jul 2016 - Tushar birthday</li>' +
+        '</ul>' +
+        '</div>' +
+        '</div>';
+
+    const barcelonaInfoWindow = new google.maps.InfoWindow({
+        content: barcelonaContentString,
+        ariaLabel: "Barcelona",
+    });
+
+    const barcelonaMarker = new AdvancedMarkerElement({
+        map,
+        position: barcelona,
+        title: "Barcelona",
+    });
+
+    barcelonaMarker.addListener("click", () => {
+        barcelonaInfoWindow.open({
+            anchor: barcelonaMarker,
+            map,
+        });
+    });
+
     // Japan 22 Sep - 3 Oct 2016
     const tokyo = { lat: 35.6764, lng: 139.65 };
 
@@ -359,7 +392,7 @@ async function initMap() {
 
     const fontainebleauContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Bouldering with Boulder Bus</div>' +
         '<h1 id="firstHeading" class="firstHeading">Fontainebleau</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
@@ -392,9 +425,9 @@ async function initMap() {
 
     const hotelJakartaContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
         '<h1 id="firstHeading" class="firstHeading">Hotel Jakarta</h1>' +
-        '<div id="bodyContent">Trip with Kathryn 25-26 April 2023. Our first holiday together.</div>' +
+        '<div id="bodyContent">Amazing 4-star hotel in Amsterdam</div>' +
         '</div>';
 
     const hotelJakartaInfoWindow = new google.maps.InfoWindow({
@@ -425,7 +458,7 @@ async function initMap() {
 
     const keukenhofContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
@@ -457,7 +490,7 @@ async function initMap() {
 
     const villaFavoritaContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Steven birthday trip 19-23 October 2025 organised by Kathryn</div>' +
         '<h1 id="firstHeading" class="firstHeading">Hotel Villa Favorita</h1>' +
         '<div id="bodyContent">' +
         "The gorgeous hotel where we stayed 19-20 October 2025" +
@@ -489,7 +522,7 @@ async function initMap() {
 
     const arimaContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Steven birthday trip 19-23 October 2025 organised by Kathryn</div>' +
         '<h1 id="firstHeading" class="firstHeading">ARIMA Hotel & Spa</h1>' +
         '<div id="bodyContent">' +
         "The beautiful hotel where we stayed 21-22 October 2025" +
@@ -519,12 +552,12 @@ async function initMap() {
     const martinb = { lat: 43.26694601928382, lng: -2.0156468200988975 };
     const martinbContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Steven birthday trip 19-23 October 2025 organised by Kathryn</div>' +
         '<h1 id="firstHeading" class="firstHeading">Restaurante Martin Berasategui</h1>' +
         '<div id="bodyContent">' +
         "Also referred to as Martin B, Three Star Michelin restaurant in " +
         "San Sebastián visited on 22 October 2025 for lunch to celebrate " +
-        "Steven's 50th birthday organised by Kathryn. We had the amazing tasting menu." +
+        "Steven's 50th birthday. We had the amazing tasting menu." +
         '</div>' +
         '</div>';
 
