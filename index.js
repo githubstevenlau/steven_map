@@ -33,12 +33,38 @@ async function initMap() {
         });
     });
 
+    // Hong Kong
+    const hongKong = { lat: 22.3193, lng: 114.1694 };
+
+    const hongKongContentString =
+        '<div id="content">' +
+        '<h1 id="firstHeading" class="firstHeading">Hong Kong</h1>' +
+        '<div id="bodyContent">Gina\'s wedding 16-18 May 2005</div>' +
+        '</div>';
+
+    const hongKongInfoWindow = new google.maps.InfoWindow({
+        content: hongKongContentString,
+        ariaLabel: "Hong Kong",
+    });
+
+    const hongKongMarker = new AdvancedMarkerElement({
+        map,
+        position: hongKong,
+        title: "Hong Kong",
+    });
+
+    hongKongMarker.addListener("click", () => {
+        hongKongInfoWindow.open({
+            anchor: hongKongMarker,
+            map,
+        });
+    });
+
     // Atlanta, GA, USA
     const atlanta = { lat: 33.7501, lng: -84.3885 };
 
     const atlantaContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Atlanta, Georgia, USA</h1>' +
         '<div id="bodyContent">Trip with Pamela and Leanna</div>' +
         '</div>';
@@ -174,7 +200,7 @@ async function initMap() {
     });
 
     // Bali, Indonesia
-    const bali = { lat: 8.4095, lng: 115.1889 };
+    const bali = { lat: -8.4095, lng: 115.1889 };
 
     const baliContentString =
         '<div id="content">' +
@@ -273,7 +299,7 @@ async function initMap() {
 
     const tokyoContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Kash, Thuc and Steven - Japan 22 Sep - 3 Oct 2016</div>' +
         '<h1 id="firstHeading" class="firstHeading">Tokyo</h1>' +
         '<div id="bodyContent">40th birthday trip with Kash and Thuc 22 Sep - 3 Oct 2016</div>' +
         '</div>';
@@ -300,7 +326,7 @@ async function initMap() {
 
     const kyotoContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
+        '<div id="siteNotice">Kash, Thuc and Steven - Japan 22 Sep - 3 Oct 2016</div>' +
         '<h1 id="firstHeading" class="firstHeading">Kyoto</h1>' +
         '<div id="bodyContent">30 Sep 2016 with Kash and Thuc</div>' +
         '</div>';
