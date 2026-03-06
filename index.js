@@ -105,7 +105,7 @@ async function initMap() {
     const argelesSurMerMarker = new AdvancedMarkerElement({
         map,
         position: argelesSurMer,
-        title: "Argeles Sur Mer",
+        title: "Argeles Sur Mer, France",
     });
 
     argelesSurMerMarker.addListener("click", () => {
@@ -133,7 +133,7 @@ async function initMap() {
     const lloretDeMarMarker = new AdvancedMarkerElement({
         map,
         position: lloretDeMar,
-        title: "Lloret de Mar",
+        title: "Lloret de Mar, Spain",
     });
 
     lloretDeMarMarker.addListener("click", () => {
@@ -189,7 +189,7 @@ async function initMap() {
     const cesmeMarker = new AdvancedMarkerElement({
         map,
         position: cesme,
-        title: "Cesme",
+        title: "Cesme, Turkey",
     });
 
     cesmeMarker.addListener("click", () => {
@@ -217,7 +217,7 @@ async function initMap() {
     const baliMarker = new AdvancedMarkerElement({
         map,
         position: bali,
-        title: "Bali",
+        title: "Bali, Indonesia",
     });
 
     baliMarker.addListener("click", () => {
@@ -250,7 +250,7 @@ async function initMap() {
     const copenhagenMarker = new AdvancedMarkerElement({
         map,
         position: copenhagen,
-        title: "Copenhagen",
+        title: "Copenhagen, Denmark",
     });
 
     copenhagenMarker.addListener("click", () => {
@@ -284,7 +284,7 @@ async function initMap() {
     const barcelonaMarker = new AdvancedMarkerElement({
         map,
         position: barcelona,
-        title: "Barcelona",
+        title: "Barcelona, Spain",
     });
 
     barcelonaMarker.addListener("click", () => {
@@ -312,7 +312,7 @@ async function initMap() {
     const tokyoMarker = new AdvancedMarkerElement({
         map,
         position: tokyo,
-        title: "Tokyo",
+        title: "Tokyo, Japan",
     });
 
     tokyoMarker.addListener("click", () => {
@@ -374,7 +374,7 @@ async function initMap() {
     const parisMarker = new AdvancedMarkerElement({
         map,
         position: paris,
-        title: "Paris",
+        title: "Paris, France",
     });
 
     parisMarker.addListener("click", () => {
@@ -402,7 +402,7 @@ async function initMap() {
     const romeMarker = new AdvancedMarkerElement({
         map,
         position: rome,
-        title: "Rome",
+        title: "Rome, Italy",
     });
 
    romeMarker.addListener("click", () => {
@@ -436,7 +436,7 @@ async function initMap() {
     const fontainebleauMarker = new AdvancedMarkerElement({
         map,
         position: fontainebleau,
-        title: "Fontainebleau",
+        title: "Fontainebleau, France",
     });
 
     fontainebleauMarker.addListener("click", () => {
@@ -559,7 +559,7 @@ async function initMap() {
 
     const arimaInfoWindow = new google.maps.InfoWindow({
         content: arimaContentString,
-        ariaLabel: "ARIMA Hotel  Spa",
+        ariaLabel: "ARIMA Hotel & Spa",
     });
 
     const arimaMarker = new AdvancedMarkerElement({
