@@ -60,6 +60,33 @@ async function initMap() {
         });
     });
 
+    // Singapore
+    const singapore = { lat: 1.3521, lng: 103.8198 };
+
+    const singaporeContentString =
+        '<div id="content">' +
+        '<h1 id="firstHeading" class="firstHeading">Singapore</h1>' +
+        '<div id="bodyContent">Holiday with Pamela, Mum and Simon</div>' +
+        '</div>';
+
+    const singaporeInfoWindow = new google.maps.InfoWindow({
+        content: singaporeContentString,
+        ariaLabel: "Singapore",
+    });
+
+    const singaporeMarker = new AdvancedMarkerElement({
+        map,
+        position: singapore,
+        title: "Singapore",
+    });
+
+    singaporeMarker.addListener("click", () => {
+        singaporeInfoWindow.open({
+            anchor: singaporeMarker,
+            map,
+        });
+    });
+
     // Atlanta, GA, USA
     const atlanta = { lat: 33.7501, lng: -84.3885 };
 
@@ -507,9 +534,6 @@ async function initMap() {
             map,
         });
     });
-
-    // Barcelona April 2024
-    //const sallesPere:
 
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
