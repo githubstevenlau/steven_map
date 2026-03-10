@@ -66,7 +66,7 @@ async function initMap() {
     const singaporeContentString =
         '<div id="content">' +
         '<h1 id="firstHeading" class="firstHeading">Singapore</h1>' +
-        '<div id="bodyContent">Holiday with Pamela, Mum and Simon</div>' +
+        '<div id="bodyContent">Visit Pamela with Mum and Simon</div>' +
         '</div>';
 
     const singaporeInfoWindow = new google.maps.InfoWindow({
@@ -83,6 +83,33 @@ async function initMap() {
     singaporeMarker.addListener("click", () => {
         singaporeInfoWindow.open({
             anchor: singaporeMarker,
+            map,
+        });
+    });
+
+    // Jakarta, Indonesia
+    const jakarta = { lat: -6.1750, lng: 106.8266 };
+
+    const jakartaContentString =
+        '<div id="content">' +
+        '<h1 id="firstHeading" class="firstHeading">Jakarta, Indonesia</h1>' +
+        '<div id="bodyContent">Visit Pamela with Mum and Simon</div>' +
+        '</div>';
+
+    const jakartaInfoWindow = new google.maps.InfoWindow({
+        content: jakartaContentString,
+        ariaLabel: "Jakarta, Indonesia",
+    });
+
+    const jakartaMarker = new AdvancedMarkerElement({
+        map,
+        position: jakarta,
+        title: "Jakarta, Indonesia",
+    });
+
+    jakartaMarker.addListener("click", () => {
+        jakartaInfoWindow.open({
+            anchor: jakartaMarker,
             map,
         });
     });
