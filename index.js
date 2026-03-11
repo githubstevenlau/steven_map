@@ -353,7 +353,7 @@ async function initMap() {
     const tokyoContentString =
         '<div id="content">' +
         '<div id="siteNotice">Kash, Thuc and Steven - Japan 22 Sep - 3 Oct 2016</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Tokyo</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Tokyo, Japan</h1>' +
         '<div id="bodyContent">40th birthday trip with Kash and Thuc 22 Sep - 3 Oct 2016</div>' +
         '</div>';
 
@@ -380,7 +380,7 @@ async function initMap() {
     const kyotoContentString =
         '<div id="content">' +
         '<div id="siteNotice">Kash, Thuc and Steven - Japan 22 Sep - 3 Oct 2016</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Kyoto</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Kyoto, Japan</h1>' +
         '<div id="bodyContent">30 Sep 2016 with Kash and Thuc</div>' +
         '</div>';
 
