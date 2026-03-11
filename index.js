@@ -500,6 +500,33 @@ async function initMap() {
         });
     });
 
+    // Carcassonne April 2023
+    const carcassonne = { lat: 43.2163, lng: 2.3539 };
+
+    const carcassonneContentString =
+        '<div id="content">' +
+        '<h1 id="firstHeading" class="firstHeading">Carcassonne</h1>' +
+        '<div id="bodyContent">Trip to Carcassonne with Georgia and Lydia 3-5 April 2023</div>' +
+        '</div>';
+
+    const carcassonneInfoWindow = new google.maps.InfoWindow({
+        content: carcassonneContentString,
+        ariaLabel: "Carcassonne, France",
+    });
+
+    const carcassonneMarker = new AdvancedMarkerElement({
+        map,
+        position: carcassonne,
+        title: "Carcassonne, France",
+    });
+
+    carcassonneMarker.addListener("click", () => {
+        carcassonneInfoWindow.open({
+            anchor: carcassonneMarker,
+            map,
+        });
+    });
+
     // Amsterdam April 2023
     const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
 
