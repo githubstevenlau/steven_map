@@ -320,8 +320,7 @@ async function initMap() {
 
     const barcelonaContentString =
         '<div id="content">' +
-        '<div id="siteNotice"></div>' +
-        '<h1 id="firstHeading" class="firstHeading">Barcelona</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Barcelona, Spain</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
         '<li>7-11 Apr 2024 - Kathryn, Ellis and Heath</li>' +
