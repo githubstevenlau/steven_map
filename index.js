@@ -147,7 +147,7 @@ async function initMap() {
     const argelesSurMerContentString =
         '<div id="content">' +
         '<div id="siteNotice"></div>' +
-        '<h1 id="firstHeading" class="firstHeading">Argeles-sur-Mer</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Argeles-sur-Mer, France</h1>' +
         '<div id="bodyContent">Holiday with Leanna</div>' +
         '</div>';
 
@@ -175,7 +175,7 @@ async function initMap() {
     const lloretDeMarContentString =
         '<div id="content">' +
         '<div id="siteNotice"></div>' +
-        '<h1 id="firstHeading" class="firstHeading">Lloret de Mar</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Lloret de Mar, Spain</h1>' +
         '<div id="bodyContent">Holiday with Leanna</div>' +
         '</div>';
 
@@ -259,7 +259,7 @@ async function initMap() {
     const baliContentString =
         '<div id="content">' +
         '<div id="siteNotice"></div>' +
-        '<h1 id="firstHeading" class="firstHeading">Bali</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Bali, Indonesia</h1>' +
         '<div id="bodyContent">Holiday with Mum, Pamela and Leanna</div>' +
         '</div>';
 
@@ -444,7 +444,7 @@ async function initMap() {
     const romeContentString =
         '<div id="content">' +
         '<div id="siteNotice"></div>' +
-        '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Rome, Italy</h1>' +
         '<div id="bodyContent">1-4 Jul 2018</div>' +
         '</div>';
 
@@ -473,7 +473,7 @@ async function initMap() {
     const fontainebleauContentString =
         '<div id="content">' +
         '<div id="siteNotice">Bouldering with Boulder Bus</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Fontainebleau</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Fontainebleau, France</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
         '<li>6-8 Oct 2023 - Boulder Bus with Georgia and Lydia</li>' +
@@ -505,7 +505,7 @@ async function initMap() {
 
     const carcassonneContentString =
         '<div id="content">' +
-        '<h1 id="firstHeading" class="firstHeading">Carcassonne</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Carcassonne, France</h1>' +
         '<div id="bodyContent">Trip to Carcassonne with Georgia and Lydia 3-5 April 2023</div>' +
         '</div>';
 
