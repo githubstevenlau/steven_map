@@ -290,7 +290,7 @@ async function initMap() {
         '<h1 id="firstHeading" class="firstHeading">Copenhagen</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
-        '<li>1-3 Feb 2025 Roxette the Musical</li>' +
+        '<li>1-3 Feb 2025 Joyride the Musical</li>' +
         '<li>17-18 Jun 2016 Jonathan Yeo Portraits</li>' +
         '</ul>' +
         '</div>' +
@@ -505,7 +505,7 @@ async function initMap() {
     const carcassonneContentString =
         '<div id="content">' +
         '<h1 id="firstHeading" class="firstHeading">Carcassonne, France</h1>' +
-        '<div id="bodyContent">Trip to Carcassonne with Georgia and Lydia 3-5 April 2023</div>' +
+        '<div id="bodyContent">Trip to Carcassonne with Georgia and Lydia 3-5 Apr 2023</div>' +
         '</div>';
 
     const carcassonneInfoWindow = new google.maps.InfoWindow({
@@ -531,7 +531,7 @@ async function initMap() {
 
     const hotelJakartaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
+        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 Apr 2023</div>' +
         '<h1 id="firstHeading" class="firstHeading">Hotel Jakarta</h1>' +
         '<div id="bodyContent">Amazing 4-star hotel in Amsterdam</div>' +
         '</div>';
@@ -564,7 +564,7 @@ async function initMap() {
 
     const keukenhofContentString =
         '<div id="content">' +
-        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
+        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 Apr 2023</div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
@@ -588,15 +588,43 @@ async function initMap() {
         });
     });
 
+    // Malmo Feb 2025
+    const malmo = { lat: 55.6050, lng: 13.0038 };
+
+    const malmoContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Copenhagen and Malmo 1-3 Feb 2025</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Malmo</h1>' +
+        '<div id="bodyContent">Joyride the Musical 2 Feb 2025</div>' +
+        '</div>';
+
+    const malmoInfoWindow = new google.maps.InfoWindow({
+        content: malmoContentString,
+        ariaLabel: "Malmo",
+    });
+
+    const malmoMarker = new AdvancedMarkerElement({
+        map,
+        position: malmo,
+        title: "Malmo, Sweden",
+    });
+
+    malmoMarker.addListener("click", () => {
+        malmoInfoWindow.open({
+            anchor: malmoMarker,
+            map,
+        });
+    });
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
     const villaFavoritaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">Steven birthday trip 19-23 October 2025 organised by Kathryn</div>' +
+        '<div id="siteNotice">Steven birthday trip 19-23 Oct 2025 organised by Kathryn</div>' +
         '<h1 id="firstHeading" class="firstHeading">Hotel Villa Favorita</h1>' +
         '<div id="bodyContent">' +
-        "The gorgeous hotel where we stayed 19-20 October 2025" +
+        "The gorgeous hotel where we stayed 19-20 Oct 2025" +
         " that Kathryn organised for Steven's 50th birthday. The view of" +
         " the beach and sea from the window was stunning. Breakfast and drinks" +
         " in the beautiful bar."
@@ -625,10 +653,10 @@ async function initMap() {
 
     const arimaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">Steven birthday trip 19-23 October 2025 organised by Kathryn</div>' +
+        '<div id="siteNotice">Steven birthday trip 19-23 Oct 2025 organised by Kathryn</div>' +
         '<h1 id="firstHeading" class="firstHeading">ARIMA Hotel & Spa</h1>' +
         '<div id="bodyContent">' +
-        "The beautiful hotel where we stayed 21-22 October 2025" +
+        "The beautiful hotel where we stayed 21-22 Oct 2025" +
         " that Kathryn organised for Steven's 50th birthday. We had a lovely balcony and a great" +
         " view of the grounds and forest. We used the luxury spa and had a relaxing massage." +
         '</div>' +
@@ -655,11 +683,11 @@ async function initMap() {
     const martinb = { lat: 43.26694601928382, lng: -2.0156468200988975 };
     const martinbContentString =
         '<div id="content">' +
-        '<div id="siteNotice">Steven birthday trip 19-23 October 2025 organised by Kathryn</div>' +
+        '<div id="siteNotice">Steven birthday trip 19-23 Oct 2025 organised by Kathryn</div>' +
         '<h1 id="firstHeading" class="firstHeading">Restaurante Martin Berasategui</h1>' +
         '<div id="bodyContent">' +
         "Also referred to as Martin B, Three Star Michelin restaurant in " +
-        "San Sebastián visited on 22 October 2025 for lunch to celebrate " +
+        "San Sebastián visited on 22 Oct 2025 for lunch to celebrate " +
         "Steven's 50th birthday. We had the amazing tasting menu." +
         '</div>' +
         '</div>';
