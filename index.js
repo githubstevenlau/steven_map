@@ -616,6 +616,33 @@ async function initMap() {
         });
     });
 
+    // Jersey July 2025
+    const jersey = { lat: 49.2138, lng: -2.1358 };
+
+    const jerseyContentString =
+        '<div id="content">' +
+        '<h1 id="firstHeading" class="firstHeading">Jersey, UK</h1>' +
+        '<div id="bodyContent">Holiday with Kathryn, Ellis and Heath 25-31 Jul 2025</div>' +
+        '</div>';
+
+    const jerseyInfoWindow = new google.maps.InfoWindow({
+        content: jerseyContentString,
+        ariaLabel: "Jersey, UK",
+    });
+
+    const jerseyMarker = new AdvancedMarkerElement({
+        map,
+        position: jersey,
+        title: "Jersey, UK",
+    });
+
+    jerseyMarker.addListener("click", () => {
+        jerseyInfoWindow.open({
+            anchor: jerseyMarker,
+            map,
+        });
+    });
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
