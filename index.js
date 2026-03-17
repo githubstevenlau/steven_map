@@ -676,7 +676,7 @@ async function initMap() {
     const villaFavoritaMarker = new AdvancedMarkerElement({
         map,
         position: villaFavorita,
-        title: "Hotel Villa Favorita",
+        title: "Hotel Villa Favorita, San Sebastian, Spain",
     });
 
     villaFavoritaMarker.addListener("click", () => {
@@ -707,7 +707,7 @@ async function initMap() {
     const arimaMarker = new AdvancedMarkerElement({
         map,
         position: arima,
-        title: "ARIMA Hotel & Spa",
+        title: "ARIMA Hotel & Spa, San Sebastian, Spain",
     });
 
     arimaMarker.addListener("click", () => {
@@ -737,7 +737,7 @@ async function initMap() {
     const martinbMarker = new AdvancedMarkerElement({
         map,
         position: martinb,
-        title: "Martin Berasategui",
+        title: "Martin Berasategui, San Sebastian, Spain",
     });
 
     martinbMarker.addListener("click", () => {
