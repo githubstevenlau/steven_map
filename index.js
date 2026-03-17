@@ -465,6 +465,16 @@ async function initMap() {
         });
     });
 
+   // Africa
+   // Robben Island and Table Mountain 19 Jul 2018
+    const robbenIsland = { lat: -33.8076, lng: 18.3712 };
+
+    const robbenIslandMarker = new AdvancedMarkerElement({
+        map,
+        position: robbenIsland,
+        title: "Robben Island, South Africa",
+    });
+
    // Fontainebleau 19-21 Jul 2019
    // Fontainebleau 6-8 Oct 2023
     const fontainebleau = { lat: 48.4047, lng: 2.7016 };
