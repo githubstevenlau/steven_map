@@ -287,7 +287,7 @@ async function initMap() {
     const copenhagenContentString =
         '<div id="content">' +
         '<div id="siteNotice"></div>' +
-        '<h1 id="firstHeading" class="firstHeading">Copenhagen</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Copenhagen, Denmark</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
         '<li>1-3 Feb 2025 Joyride the Musical</li>' +
@@ -604,7 +604,7 @@ async function initMap() {
     const malmoContentString =
         '<div id="content">' +
         '<div id="siteNotice">Copenhagen and Malmo 1-3 Feb 2025</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Malmo</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">Malmo, Sweden</h1>' +
         '<div id="bodyContent">Joyride the Musical 2 Feb 2025</div>' +
         '</div>';
 
