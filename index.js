@@ -475,6 +475,13 @@ async function initMap() {
         title: "Robben Island, South Africa",
     });
 
+    const robbenIslandContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Africa 7 - 21 July 2018</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Robben Island, South Africa</h1>' +
+        '<div id="bodyContent">Robben Island 19 July 2018</div>' +
+        '</div>';
+
    // Fontainebleau 19-21 Jul 2019
    // Fontainebleau 6-8 Oct 2023
     const fontainebleau = { lat: 48.4047, lng: 2.7016 };
