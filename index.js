@@ -479,8 +479,20 @@ async function initMap() {
         '<div id="content">' +
         '<div id="siteNotice">Africa 7 - 21 July 2018</div>' +
         '<h1 id="firstHeading" class="firstHeading">Robben Island, South Africa</h1>' +
-        '<div id="bodyContent">Robben Island 19 July 2018</div>' +
+        '<div id="bodyContent">Robben Island, UNESCO World Heritage Site, 19 July 2018</div>' +
         '</div>';
+
+    const robbenIslandInfoWindow = new google.maps.InfoWindow({
+        content: robbenIslandContentString,
+        ariaLabel: "Robben Island",
+    });
+
+    robbenIslandMarker.addListener("click", () => {
+        robbenIslandInfoWindow.open({
+            anchor: robbenIslandMarker,
+            map,
+        });
+    });
 
    // Fontainebleau 19-21 Jul 2019
    // Fontainebleau 6-8 Oct 2023
