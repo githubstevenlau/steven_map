@@ -1,10 +1,13 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "steven_map",
   "version": "1.0.0",
-  "description": "",
+  "description": "Steven holiday map",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "private": true
+  "scripts": {},
+  "private": true,
+  "author": {
+    "name": "Steven Lau",
+    "email": "softwaredev@stevenlau.net",
+    "url": "https://www.stevenlau.net"
+  }
 }
