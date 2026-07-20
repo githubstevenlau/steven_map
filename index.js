@@ -494,18 +494,19 @@ async function initMap() {
         });
     });
 
-   // Fontainebleau 19-21 Jul 2019
+   // Fontainebleau 3-6 Jul 2026
    // Fontainebleau 6-8 Oct 2023
+   // Fontainebleau 19-21 Jul 2019
     const fontainebleau = { lat: 48.4047, lng: 2.7016 };
 
     const fontainebleauContentString =
         '<div id="content">' +
-        '<div id="siteNotice">Bouldering with Boulder Bus</div>' +
         '<h1 id="firstHeading" class="firstHeading">Fontainebleau, France</h1>' +
         '<div id="bodyContent">' +
         '<ul>' +
-        '<li>6-8 Oct 2023 - Boulder Bus with Georgia and Lydia</li>' +
-        '<li>19-21 Jul 2019 - Boulder Bus</li>' +
+            '<li>3-6 Jul 2026 - bouldering with Simon on trip with Hackney Climb Bus</li>' +
+            '<li>6-8 Oct 2023 - bouldering with Georgia, Lydia and Simon on trip with Boulder Bus</li>' +
+            '<li>19-21 Jul 2019 - bouldering on trip with Boulder Bus</li>' +
         '</ul>' +
         '</div>' +
         '</div>';
