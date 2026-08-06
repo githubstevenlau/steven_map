@@ -9,5 +9,9 @@
     "name": "Steven Lau",
     "email": "softwaredev@stevenlau.net",
     "url": "https://www.stevenlau.net"
+  },
+  "bugs": {
+    "url": "https://github.com/githubstevenlau/steven_map/issues",
+    "email": "steven_map_bugs@stevenlau.net"
   }
 }
