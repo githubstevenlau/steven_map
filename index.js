@@ -766,6 +766,9 @@ async function initMap() {
             map,
         });
     });
+
+    // Disneyland Paris August 2026
+    const bandbHotel = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 }
 
 window.initMap = initMap();
