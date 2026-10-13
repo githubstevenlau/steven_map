@@ -768,7 +768,66 @@ async function initMap() {
     });
 
     // Disneyland Paris August 2026
-    const bandbHotel = { lat: 43.31700809564674, lng: -1.9858997367605542 };
+    const bandbHotel = { lat: 48.839336104684655, lng: 2.7818560921374247 };
+
+    const bandbHotelContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Disneyland Paris August 2026</div>' +
+        '<h1 id="firstHeading" class="firstHeading">B&B HOTEL</h1>' +
+        '<div id="bodyContent">' +
+        'B&B HOTEL Marne-la-Vallée Val d\'Europe.' +
+        'The hotel where we stayed 28 August - 1 Sep 2026 ' +
+        'for our trip to Disneyland Paris: Kathryn, Ellis, Heath, ' +
+        'Harrison, Georgia, Lydia and Steven.' +
+        '</div>' +
+        '</div>';
+
+    const bandbHotelInfoWindow = new google.maps.InfoWindow({
+        content: bandbHotelContentString,
+        ariaLabel: "B&B HOTEL",
+    });
+
+    const bandbHotelMarker = new AdvancedMarkerElement({
+        map,
+        position: bandbHotel,
+        title: "B&B HOTEL Marne-la-Vallée Val d\'Europe",
+    });
+
+    bandbHotelMarker.addListener("click", () => {
+        bandbHotelInfoWindow.open({
+            anchor: bandbHotelMarker,
+            map,
+        });
+    });
+
+    const disneylandParis = { lat: 48.86861952901708, lng: 2.783725830317585 };
+    const disneylandParisContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Disneyland Paris August 2026</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Disneyland Paris</h1>' +
+        '<div id="bodyContent">' +
+        'Disneyland Paris 29-31 Aug 2026 ' +
+        'with Kathryn, Ellis, Heath, Harrison, Georgia, Lydia, Steven, Natalie, Atul and Annoushka.' +
+        '</div>' +
+        '</div>';
+
+    const disneylandParisInfoWindow = new google.maps.InfoWindow({
+        content: disneylandParisContentString,
+        ariaLabel: "Disneyland Paris",
+    });
+
+    const disneylandParisMarker = new AdvancedMarkerElement({
+        map,
+        position: disneylandParis,
+        title: "Disneyland Paris",
+    });
+
+    disneylandParisMarker.addListener("click", () => {
+        disneylandParisInfoWindow.open({
+            anchor: disneylandParisMarker,
+            map,
+        });
+    });
 }
 
 window.initMap = initMap();
